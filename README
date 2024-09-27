@@ -20,7 +20,7 @@ Este projeto é uma ferramenta de análise de ações que utiliza dados históri
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/avalia-acoes.git
+   git clone https://github.com/Raphaeldaysc/avalia-acoes.git
    ```
 2. Navegue até o diretório do projeto:
    ```bash

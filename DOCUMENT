@@ -1,0 +1,64 @@
+# Documentação
+# Sistema de Análise de Ações
+
+Este documento fornece uma visão geral de um script Python projetado para analisar dados de ações, calcular indicadores técnicos e gerar visualizações para auxiliar na tomada de decisões de investimento.
+
+## Sumário
+- [Visão Geral](#visão-geral)
+- [Dependências](#dependências)
+- [Constantes](#constantes)
+- [Funções](#funções)
+- [Uso](#uso)
+
+## Visão Geral
+Este script baixa dados históricos de ações para tickers especificados (AAPL e NVDA neste caso), calcula vários indicadores técnicos, gera visualizações e realiza análises básicas. Ele também inclui funcionalidade para agendar tarefas diárias de análise.
+
+## Dependências
+- yfinance
+- pandas
+- datetime
+- schedule
+- time
+- plotly
+- logging
+
+## Constantes
+- `TICKER_NASDAQ_1`: O primeiro símbolo de ação para buscar dados (AAPL).
+- `TICKER_NASDAQ_2`: O segundo símbolo de ação para buscar dados (NVDA).
+- `START_DATE`: A data de início para buscar dados históricos.
+- `END_DATE`: A data de término para buscar dados históricos (data atual).
+
+## Funções
+
+### `fetch_data(ticker: str) -> pd.DataFrame`
+Busca dados históricos de uma ação para o ticker especificado.
+
+### `calculate_indicators(data: pd.DataFrame) -> pd.DataFrame`
+Calcula indicadores técnicos (SMA50, SMA200, Volatilidade, RSI, MACD) e os adiciona aos dados.
+
+### `calculate_rsi(data: pd.DataFrame, window: int) -> pd.Series`
+Calcula o Índice de Força Relativa (RSI) para os dados fornecidos e janela especificada.
+
+### `calculate_macd(close: pd.Series, fast: int = 12, slow: int = 26, signal: int = 9) -> tuple`
+Calcula o MACD (Moving Average Convergence Divergence) para a série de preços de fechamento.
+
+### `plot_data(data: pd.DataFrame, ticker: str) -> None`
+Gera e exibe gráficos interativos para o preço de fechamento da ação, médias móveis, volatilidade, RSI e MACD usando Plotly.
+
+### `save_to_csv(data: pd.DataFrame, ticker: str) -> None`
+Salva os dados da ação em um arquivo CSV.
+
+### `analyze_stock(ticker: str) -> None`
+Realiza a análise de ações, incluindo busca de dados, cálculo de indicadores, geração de gráficos e análise básica.
+
+### `job() -> None`
+Tarefa agendada para executar a análise de ações para os tickers especificados.
+
+### `schedule_jobs() -> None`
+Agenda a execução diária das tarefas de análise de ações.
+
+## Uso
+1. Certifique-se de que todas as dependências estejam instaladas.
+2. Execute o script. Ele irá buscar dados, calcular indicadores, gerar gráficos e agendar uma tarefa diária para atualizar os dados e realizar análises.
+3. Os resultados da análise serão exibidos no console e os gráficos serão gerados interativamente.
+4. Os dados calculados serão salvos em arquivos CSV para cada ação analisada.

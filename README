@@ -1,0 +1,59 @@
+# Avalia Ações 📊
+
+Este projeto é uma ferramenta de análise de ações que utiliza dados históricos para calcular indicadores técnicos e gerar visualizações para auxiliar na tomada de decisões de investimento.
+
+## Funcionalidades 🚀
+
+- **Download de Dados Históricos**: Baixa dados históricos de preços de ações usando a biblioteca yfinance.
+- **Cálculo de Indicadores Técnicos**: Calcula médias móveis (SMA50 e SMA200), volatilidade, RSI (Índice de Força Relativa) e MACD.
+- **Gráficos Interativos**: Gera gráficos interativos usando Plotly, incluindo preço de fechamento, médias móveis, volatilidade, RSI e MACD.
+- **Análise Automática**: Fornece uma análise básica da tendência do preço em relação às médias móveis, condições de sobrecompra/sobrevenda baseadas no RSI, e sinais de compra/venda baseados no MACD.
+- **Exportação de Dados**: Salva os dados históricos e indicadores calculados em um arquivo CSV.
+- **Agendamento de Tarefas**: Utiliza a biblioteca schedule para executar análises diárias automaticamente.
+
+## Requisitos 📋
+
+- Python 3.x
+- Bibliotecas Python: `yfinance`, `pandas`, `datetime`, `schedule`, `plotly`, `logging`
+
+## Instalação 🛠️
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/avalia-acoes.git
+   ```
+2. Navegue até o diretório do projeto:
+   ```bash
+   cd avalia-acoes
+   ```
+3. Instale as dependências:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## Uso 📖
+
+1. Execute o script:
+
+   ```bash
+   python main.py
+   ```
+
+2. Forneça o símbolo da ação que deseja analisar quando solicitado.
+
+## Contribuição 🤝
+
+Contribuições são bem-vindas! Se você encontrar algum problema ou tiver sugestões para melhorar o projeto, por favor, abra uma issue ou envie um pull request.
+
+## Licença 📜
+
+Este projeto está licenciado sob uma Licença de Uso e Contribuição personalizada. Veja o arquivo LICENSE para mais detalhes.
+
+Principais pontos da licença:
+
+- Pessoas físicas podem contribuir e ganhar direito de uso comercial se a contribuição for aceita.
+- Empresas e pessoas jurídicas precisam de acordo direto com o titular dos direitos autorais para uso comercial.
+- Distribuições devem ser feitas sob os mesmos termos desta licença.
+- Contribuições aceitas tornam-se parte do software e estão sujeitas aos termos da licença.
+
+Copyright (c) 2024 Raphael Dias Câmara

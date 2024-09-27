@@ -13,19 +13,20 @@ Python 3.x
 Bibliotecas Python: yfinance, pandas, datetime, schedule, plotly, logging
 Instalação 🛠️
 Clone o repositório:
+
 git clone https://github.com/Raphaeldaysc/avalia-acoes.git
-
 Navegue até o diretório do projeto:
+
 cd avalia-acoes
-
 Instale as dependências:
-pip install -r requirements.txt
 
+pip install -r requirements.txt
 Uso 📖
 Execute o script:
-python main.py
 
+python main.py
 Forneça o símbolo da ação que deseja analisar quando solicitado.
+
 Contribuição 🤝
 Contribuições são bem-vindas! Se você encontrar algum problema ou tiver sugestões para melhorar o projeto, por favor, abra uma issue ou envie um pull request.
 

@@ -8,8 +8,8 @@ from plotly.subplots import make_subplots
 import logging
 
 # Configurações e Constantes
-acao1 = input('Digite o primeiro ticker: ')
-acao2 = input('Digite o segundo ticker: ')
+acao1 = input('Digite a primeira Ação: ')
+acao2 = input('Digite a segunda Ação: ')
 TICKER_NASDAQ_1 = acao1
 TICKER_NASDAQ_2 = acao2
 START_DATE = '2024-01-01'
